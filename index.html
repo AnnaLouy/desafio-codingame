@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma tela de Teste</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body> 
+
+  
+       
+    <nav class="navbar fixed-top navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#section-sobre">SOBRE</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section-resolucoes">RESOLUÇÕES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section-conclusao">CONCLUSÃO</a></li>
+                    </ul>
+                </div>
+        </div> 
+    </nav>
+        
+        <section class="site-section sobre" id="section-sobre">
+            <div class="container">
+                <h3 class="text-center ts">SOBRE</h3>
+                <p class="text-justify pe">
+                    Este é um teste prático para a vaga de dev front-end. No teste, a concorrente Anna Beatriz(eu) resolveu alguns desafios do site <a href="https://www.codingame.com">codingame</a> <br>
+                    e aqui nesta tela, além de demonstrar seu nível de habilidade em programação front-end (utilizando das linguagens: CSS, HTML e Bootstrap) ainda expos as resoluções para os desafios.<br>
+                    Não só desafiada pelas propostas do site codingame, a concorrente também precisou desenvolver este layout, pensando em como criar um fluxo de informações em uma tela apenas, como manda o enunciado do teste.<br>
+                </p>
+            </div>
+        </section>
+  
+<section class="site-section resolution" id="section-resolucoes">
+    <h3 class="text-center res">RESOLUÇÕES</h3>
+    <p class="text-center rss">
+        Clque nos botões abaixo para saber mais sobre os quebra-cabeças e suas resoluções.
+    </p>
+    <div class="container">
+      
+
+       <table class="table-dark table-striped col-sm-12 tab">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" class="text-center col-sm-8">Quebra-Cabeça</th>
+            <th scope="col" class="text-center">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td class="text-center">Onboarding</td>
+            <td> <button class="btn btn-primary pull-right" type="button" data-toggle="collapse" data-target="#overboarding" aria-expanded="false" aria-controls="overboarding">
+                Ver resolução
+              </button></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td class="text-center">The Descent</td>
+            <td><button class="btn btn-primary pull-right" type="button" data-toggle="collapse" data-target="#thedescent" aria-expanded="false" aria-controls="thedescent">
+                Ver resolução
+              </button></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td class="text-center">ASCII Art</td>
+            <td><button class="btn btn-primary pull-right" type="button" data-toggle="collapse" data-target="#aa" aria-expanded="false" aria-controls="aa">
+                Ver resolução
+              </button></td>
+          </tr>
+        </tbody>
+      </table> 
+
+       <div class="col-sm-12">
+          
+          <div class="collapse" id="overboarding">
+            <div class="card col-sm-12">
+                    <div class="card-body">
+                        <h5 class="card-title row">Onboarding</h5>
+                        <p class="text-justify"><a href="https://www.codingame.com/training/easy/onboarding">Jogo</a></p>
+                        
+                        <div class="card-text">
+                            Enunciado
+
+                            Your program must destroy the enemy ships by shooting the closest enemy on each turn.</br>
+                            <ul> 
+                                <li>-On each start of turn (within the game loop), you obtain information on the two closest enemies: enemy1 and dist1: the name and the distance to enemy 1.</br> 
+                            enemy2 and dist2: the name and the distance to enemy 2.</br></li>
+                                <li>- Before your turn is over (end of the loop), output the value of either enemy1 or enemy2 to shoot the closest enemy.<br></li>
+                            </ul>
+                            <div class="row">
+                                <div class="card col-sm-6">
+                                    <div class="card-header">Resolução</div>
+                                    <div class="card-text">
+                                        <code>
+                                            /**
+                                            * CodinGame planet is being attacked by slimy insectoid aliens.<br>
+                                            * <---<br>
+                                            * Hint:To protect the planet, you can implement the pseudo-code provided in the statement, below the player.<br>
+                                            **/<br>
+        
+        
+                                            // game loop<br>
+                                            while (true) {<br>
+                                                const enemy1 = readline(); // name of enemy 1<br>
+                                                const dist1 = parseInt(readline()); // distance to enemy 1<br>
+                                                const enemy2 = readline(); // name of enemy 2<br>
+                                                const dist2 = parseInt(readline()); // distance to enemy 2<br>
+                                            
+                                                console.log(dist1 < dist2 ? enemy1 : enemy2)<br>
+                                            }<br>
+                                        </code>
+                                    </div>
+                                </div> 
+                                <div class="card col-sm-6">
+                                    <div class="card-header">O que eu aprendi:</div>
+                                    <div class="card-text">
+                                        <h4>Loops de Repetição ( While ), Condições</h4>
+                                        <p class="text-justify">
+                                            na linha <code>console.log(dist1 < dist2 ? enemy1 : enemy2)</code> eu fiz uma verificação para ver qual dos inimigos estava mais perto, visto que o dist1 e dist2 conforme enunciado mostrada o valor da distancia do inimigo para mim, verifiquei qual estava mais perto e "Printei" o nome dele para que o jogo atirasse e destruisse o inimigo mais proximo.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+            </div>
+        </div>
+        
+          
+          <div class="collapse" id="thedescent">
+            <div class="card col-sm-12">
+                    <div class="card-body">
+                        <h5 class="card-title">The Descent</h5>
+                        <p><a href="https://www.codingame.com/training/easy/the-descent">Jogo</a></p>
+                        <div class="card-text">
+                            Enunciado
+
+                            Destroy the mountains before your starship collides with one of them. For that, shoot the highest mountain on your path.</br>
+                            <ul> 
+                                <li>At the start of each game turn, you are given the height of the 8 mountains from left to right.</br></li>
+                                <li>By the end of the game turn, you must fire on the highest mountain by outputting its index (from 0 to 7).<br></li>
+                            </ul>
+
+                            <div class="row">
+                                <div class="card col-sm-6">
+                                    <div class="card-header">Resolução</div>
+                                    <div class="card-text">
+                                        <code>
+                                            /**<br>
+                                            * The while loop represents the game.<br>
+                                            * Each iteration represents a turn of the game<br>
+                                            * where you are given inputs (the heights of the mountains)<br>
+                                            * and where you have to print an output (the index of the mountain to fire on)<br>
+                                            * The inputs you are given are automatically updated according to your last actions.<br>
+                                            **/<br>
+                                           
+                                           
+                                           // game loop<br>
+                                           while (true) {<br>
+                                           
+                                               let position = 0;<br>
+                                               let grande = 0;<br>
+                                           
+                                               for (let i = 0; i < 8; i++) {<br>
+                                                   let mountainH = +readline(); // represents the height of one mountain.<br>
+                                               if (mountainH > grande) {<br>
+                                                   position=i;<br>
+                                                   grande = mountainH<br>
+                                               }<br>
+                                               }<br>
+                                           
+                                               // Write an action using console.log()<br>
+                                               // To debug: console.error('Debug messages...');<br>
+                                           
+                                               console.log(position);     // The index of the mountain to fire on.<br>
+                                           
+                                           }<br>
+                                            
+                                        </code>
+                                    </div>
+                                </div> 
+                                <div class="card col-sm-6">
+                                    <div class="card-header">O que eu aprendi:</div>
+                                    <div class="card-text">
+                                        <h4>Loops de Repetição ( While ), Condições</h4>
+                                        <p class="text-justify">
+                                            na linha <code>console.log(position)</code> foi puxada a informação escrita na linha <code>if (mountainH > grande) {position=i;grande = mountainH}</code> para verificar qual das montanhas da fileira era a maior.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+            </div>
+        </div>
+
+        
+          
+          <div class="collapse" id="aa">
+            <div class="card col-sm-12">
+                    <div class="card-body">
+                        <h5 class="card-title">ASCII Art</h5>
+                        <p><a href="https://www.codingame.com/forum/t/ascii-art-puzzle-discussion/34/163">Jogo</a></p>
+                        <div class="card-text">
+                            Enunciado<br>
+
+                            In stations and airports you often see this type of screen.<br>
+
+                            Have you ever asked yourself how it might be possible to simulate this display on a good old terminal? We have: with ASCII art!</br>
+                            <ul> 
+                                <li>ASCII art allows you to represent forms by using characters.</br></li>
+                                <li>​Your mission is to write a program that can display a line of text in ASCII art in a style you are given as input.<br></li>
+                            </ul>
+
+                            <div class="row">
+                                <div class="card col-sm-6">
+                                    <div class="card-header">Resolução</div>
+                                    <div class="card-text">
+                                        <code>
+                                            /**<br>
+                                            * Auto-generated code below aims at helping you parse<br>
+                                            * the standard input according to the problem statement.<br>
+                                            **/<br>
+
+                                            var L = parseInt(readline());<br>
+                                            var H = parseInt(readline());<br>
+                                            var T = readline().toLowerCase();<br>
+                                            for (let i = 0; i < H; i++) {<br>
+                                                let row = readline();<br>
+                                                let str = '';<br>
+
+                                                for(let j=0; j < T.length; j++) {<br>
+                                                    let index = (T[j].charCodeAt(0)-97) * L;<br>
+                                                    (index < 0) && (index=26*L); </br>
+                                                    str += row.slice(index, index + L);</br>
+                                                }
+                                                console.log(str);</br>
+                                            }</br>  
+                                        </code>
+                                    </div>
+                                </div> 
+                                <div class="card col-sm-6">
+                                    <div class="card-header">O que eu aprendi:</div>
+                                    <div class="card-text">
+                                        <h4>Loops de Repetição ( While ), Array, Condições</h4>
+                                        <p class="text-justify">
+                                            O código lê a altura e largura do que seria as ASCII Letters e a parte de row relaciona os símbolos às letras dispostas na string. Para cada simbolo que irá substituir a string é calculado por mutiplicação e então escolhido o padrão correto de símbolos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+            </div>
+        </div>
+       </div>
+   </div>
+   
+</section>
+
+<section class="site-section conclude" id="section-conclusao">
+    <div class="container conclusao">
+        <h3 class="text-center cc">CONCLUSÃO</h3>
+        <p class="text-justify cct">
+            O teste foi longo, exigindo da concorrente que pusesse em prova seus conhecimentos e um pouco de paciência.
+            Depois de iniciar e desistir de vários projetos planejados, finalmente uma tela se formou para a prova de sua perseverança.
+            E aqui temos uma foto de gatinho pra animar essa tela e seu dia/noite. <br>
+            
+        </p>
+        <p class="text-center cctt">Obrigada pela oportunidade.</p>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+<footer>
+   <section class="site-section rodape">
+        <p>
+            Feito por @AnnaBeatriz - 11:18 ~ 20:20 - 17/08/2020
+        </p>
+
+   </section>
+</footer>
+</html>
